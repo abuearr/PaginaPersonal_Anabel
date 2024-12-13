@@ -1,0 +1,865 @@
+/* PALETA DE COLORES ----------------------------------------------------------*/
+:root {
+    --color-oscuro: #2b4c7e;
+    --color-titulo-web: #487aa1;
+    --color-azul-claro: #b2d9f7;
+    --color-letra-titulo-web: #3d3c3b;
+    --color-cuerpo: #dde3ca;
+    --color-marron:#7c8071;
+    --color-letra-cursiva: grey;
+    --color-clarito: #bdd1de;
+}
+/* GENERAL --------------------------------------------------------------------*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    min-height: 100%;
+}
+
+hr{
+    border: solid grey 0.2vh;
+}
+
+h1{
+    margin: auto; 
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-letra-cursiva);
+}
+
+.mini-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3vh;
+    text-decoration: underline;
+    color: var(--color-letra-titulo-web);
+    color: white;
+    box-sizing: border-box; /* Asegura que padding y borde no afecten el ancho */
+    padding: 0; /* Eliminar cualquier padding que pudiera estar limitando el ancho */
+    border-radius: 2vh;
+}
+/* NAV ESTÁTICO -----------------------------------------------------------*/
+nav {
+    width: 100%;
+    height: auto;
+    background-color: var(--color-azul-claro);
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+nav a {
+    display: block;
+    width: 100%; 
+}
+
+nav button {
+    height: 7vh;
+    display: flex;     
+    justify-content: center; 
+    align-items: center;
+    font-weight: bold;
+    width: 100%; 
+    border: solid 0.5vh var(--color-titulo-web);
+    background: linear-gradient(var(--color-titulo-web), var(--color-azul-claro));
+    cursor: pointer;
+    flex-grow: 1; /* Hace que los botones se estiren para llenar el espacio disponible */
+    box-sizing: border-box; /* Asegura que el padding y el border no afecten el tamaño total */
+}
+
+nav button:hover {
+    background: black;
+    color: white;
+}
+
+nav .dropdown {
+    position: relative;
+    display: none; /* Por defecto, el desplegable está oculto */
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--color-azul-claro);
+    min-width: 14.2vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+nav .dropdown-content a {
+    color: black;
+    padding: 1vh;
+    text-decoration: none;
+    display: block;
+}
+
+nav .dropdown-content a:hover {
+    background-color: var(--color-titulo-web);
+    color: white;
+}
+
+/* Mostrar el dropdown al pasar el cursor */
+nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* MAIN 1 ----------------------------------------------------------------------------------------------*/
+/* Cabecera */
+.header1{
+    background: linear-gradient(var(--color-azul-claro), var(--color-titulo-web));
+    color: var(--color-letra-titulo-web); 
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+}
+
+.header1 h1{
+    margin: auto; 
+    text-align: center;
+    font-size: 6vh;
+}
+
+.main1{
+    background: linear-gradient(var(--color-titulo-web), var(--color-azul-claro));
+    height: 83vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* MAIN 2 ----------------------------------------------------------------*/
+/* Cabecera */
+.header2{
+    display: flex;
+    justify-content: space-between;
+    height: 8vh;
+    background: radial-gradient(var(--color-azul-claro), var(--color-titulo-web));
+    color: var(--color-letra-titulo-web); 
+    border: solid 0.5vh var(--color-titulo-web);
+} 
+.main2 {
+    display: flex;
+    height: 85vh; /* Usa vh para controlar la altura */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+/* Parte izquierda (texto) */
+.parte-izquierda2 {
+    background-color: black;
+    color: white;
+    height: 85vh; 
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh; /* Espaciado interno proporcional a la altura */
+}
+
+/* Artículos dentro del texto */
+.article-izquierda2 {
+    width: 90%; 
+    text-align: justify; 
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    padding: 2vh;
+    min-height: 20vh; /* Asegura que cada artículo tenga suficiente altura para centrar el texto */
+}
+
+/* Parte derecha (aside) */
+.aside2 {
+    background-color: white;
+    height: 85vh; 
+    width: 30%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+}
+
+.parte-izquierda2 hr{
+    width: 100%;
+}
+
+.logo {
+    max-height: 40vh; /* Limita la altura de la imagen */
+    max-width: 90%; /* Limita el ancho de la imagen */
+    object-fit: contain; /* Asegura que la imagen no se deforme */
+}
+
+/* MAIN 3 ----------------------------------------------------------------*/
+/* Cabecera */
+.header3 {
+    display: flex;
+    justify-content: space-between;
+    height: 8vh;
+    background: radial-gradient(var(--color-azul-claro), var(--color-titulo-web));
+    color: var(--color-letra-titulo-web);
+    border: solid 0.5vh var(--color-titulo-web);
+}
+
+.main3 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Parte Arriba */
+.partearriba3 {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28vh;  
+}
+
+.partearriba3 p {
+    padding: 2vw;
+    text-align: justify;
+}
+
+/* Parte Medio */
+.partemedio3 {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28vh;
+    color: white;
+}
+
+.partemedio3 p {
+    padding: 2vw;
+    text-align: justify;
+}
+
+/* Parte Abajo */
+.parteabajo3 {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28vh;
+}
+
+.parteabajo3 p {
+    padding: 2vw;
+    text-align: justify;
+}
+
+/* Estilo de los elementos span dentro de los párrafos */
+.span3 {
+    font-weight: bold;
+    text-decoration: underline;
+    line-height: 2;
+}
+
+/* Estilos para las imágenes dentro de los artículos */
+.contenido-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;       
+    max-width: 100%;  
+    height: auto;     
+    max-height: 80%; 
+    margin: 0 auto; 
+}
+
+/* Estilos de las imágenes para ajustarse al contenedor */
+.musica, .cocina, .disenio {
+    width: auto;
+    height: 20vh;        
+    object-fit: contain;  /* Asegura que la imagen se ajusta sin distorsión */
+    max-height: 100%;     /* Limita la altura máxima de la imagen al 100% de su contenedor */
+}
+
+/* Animación de latir */
+@keyframes latir {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.musica, .cocina, .disenio {
+    animation: latir 3s infinite;
+}
+
+/* MAIN 4 -------------------------------------------------------------------*/
+/* Cabecera */
+.header4{
+    display: flex;
+    justify-content: space-between;
+    height: 8vh;
+    background: radial-gradient(var(--color-azul-claro), var(--color-titulo-web));
+    color: var(--color-letra-titulo-web);
+    border: solid 0.5vh var(--color-titulo-web);
+}
+
+.main4 h2{
+    margin: auto; 
+    text-align: center;
+}
+
+.main4{
+    background-color:black;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.partearriba4{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 2vh;
+    margin-bottom: 5vh;
+} 
+
+.articlearribader4 {
+    width: 30vw;
+    height: auto; /* Ajusta automáticamente al contenido */
+    margin-left: 5vw;
+    margin-right: 5vw;
+    background: linear-gradient(145deg, var(--color-titulo-web), var(--color-azul-claro)); /* Efecto de degradado */
+    box-shadow: 0 4px 8px var(--color-letra-cursiva), 0 6px 20px var(--color-letra-cursiva);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vh;
+}
+
+.articlearribader4 h2 {
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+.articlearribader4 hr {
+    width: 100%; 
+    border: none; /* Elimina el borde predeterminado */
+    border-top: 0.3vh solid rgba(255, 255, 255, 0.7); /* Línea decorativa */
+    margin: 1vh 0; 
+}
+
+.articlearribader4 ul {
+    padding-left: 2vh ;
+    list-style-type: none; /* Elimina viñetas predeterminadas */
+}
+
+.articlearribader4 li {
+    margin-bottom: 1vh; /* Espaciado entre elementos */
+    line-height: 1.6; /* Mejor separación entre líneas */
+    text-align: left; /* Alineación izquierda para un diseño más legible */
+}
+
+.articlearribader4 .fecha {
+    color: grey; /* Color más claro para las fechas */
+    font-style: italic; /* Cursiva para diferenciarlas aún más */
+    font-weight: bold;
+}
+
+.articlearribaizq4 {
+    width: 30vw;
+    height: auto; 
+    margin-left: 5vw;
+    margin-right: 5vw;
+    background: linear-gradient(145deg, var(--color-titulo-web), var(--color-azul-claro)); /* Efecto de degradado */
+      box-shadow: 0 4px 8px var(--color-letra-cursiva), 0 6px 20px var(--color-letra-cursiva);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vh;
+}
+
+.articlearribaizq4 h2 {
+    text-align: center;
+    margin-bottom: 1vh;
+} 
+.articlearribaizq4 hr {
+    width: 100%; 
+    border: none;
+    border-top: 0.3vh solid rgba(255, 255, 255, 0.7); /* Línea decorativa */
+    margin: 1vh 0;
+}
+
+.articlearribaizq4 ul {
+    padding-left: 2vh ;
+    list-style-type: none; /* Elimina las viñetas */
+}
+
+.articlearribaizq4 li {
+    text-align: left; /* Alineación izquierda para un diseño más legible */
+    margin-bottom: 1vh; /* Espaciado entre elementos */
+    line-height: 1.6; /* Mejor separación entre líneas */
+}
+
+.articlearribaizq4 .diploma {
+    color: grey; /* Color más claro para las fechas */
+    font-style: italic; /* Cursiva para diferenciarlas aún más */
+    font-weight: bold;
+}
+
+.partemedio4{
+    background-color: black;
+    height: 50vh;
+    display: flex;
+    margin-bottom: 4vh;
+    width: 100%;
+}
+
+.parteabajo4 {
+    background-color: var(--color-cuerpo);
+    height:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.carousel-container {
+    width: 100vw;
+    margin-top: 5vh;
+    height: 40vh; /* Ajusta el alto de las imágenes */
+    overflow: hidden; /* Oculta imágenes que no están visibles */
+}
+
+.carousel-track {
+    display: flex;
+    width: calc(5 * 40vw + 5 * 2vw); /* Ajusta para incluir 5 imágenes y 4 espacios entre ellas */
+    animation: scroll 15s infinite;
+    gap: 3vw; /* Espacio entre imágenes */
+    padding: 0 1vw; /* Añade un poco de espacio lateral al carrusel */
+}
+
+.carousel-track img {
+    width: auto; 
+    height: 40vh; 
+    object-fit: cover; /* Ajusta la imagen para que no se deforme */
+}
+
+/* Animación para desplazar las imágenes */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    40% { transform: translateX(-40vw); } 
+    60% { transform: translateX(-100vw); } 
+    100% { transform: translateX(0); }
+}
+.ubicacion{
+    height:40vh ;
+    width: 100vw;
+}
+
+/* MAIN 5 -----------------------------------------------------------------------*/
+.header5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    background: radial-gradient(var(--color-azul-claro), var(--color-titulo-web));
+    color: var(--color-letra-titulo-web);
+    width: 100%;
+    padding: 0 5vw;
+    border: solid 0.5vh var(--color-titulo-web);
+}
+
+/* Estilos generales para el contenedor principal */
+.main5 {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Estilos para la parte superior con la tabla */
+.partearriba5 {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    height: auto;
+    flex-wrap: wrap;
+}
+.parteabajo5 {
+    background-color: black;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom:2vh ;
+    color:white;
+}
+.parteabajo5 a{
+    text-decoration: underline;
+}
+/* Estilos para la parte media del formulario */
+.partemedio5 {
+    background-color: black;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los formularios se apilen en pantallas pequeñas */
+    padding: 3vh 0;
+    gap: 2vw;
+}
+
+/* Estilos para los artículos en la parte media */
+.articleformmedio5 {
+    width: 30%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh 0;
+}
+
+.textareaarriba {
+    height: 10vh;
+    width: 30vw;
+    max-width: 400px;
+    background-color: var(--color-azul-claro);
+}
+
+.textareaabajo {
+    height: 20vh;
+    width: 30vw;
+    max-width: 400px;
+    background-color: var(--color-azul-claro);
+}
+
+/* Estilos para el footer */
+footer {
+    width: 100%;
+    height: 7vh;
+    background-color: var(--color-titulo-web);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionfooter {
+    width: 14vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.ig, .tiktok, .linktree, .youtube, .linkedin, .twitter, .github{
+    height: 5vh;
+    width: auto;
+}
+
+.ig, .tiktok, .youtube, .linkedin, .twitter, .github{
+    filter: invert(1);
+}
+
+/* RESPONSIVE (max-width: 768px) --------------------------------------------------- */
+@media (max-width: 768px) {
+/* NAVEGACIÓN -------------------------------------------------------------------*/
+    nav {
+        width: 100%;
+        flex-direction: column; 
+    }
+    /* Adjust buttons and layout for sections */
+    nav button {
+        width: 100%; /* Full width for buttons in the navbar */
+    }
+
+    nav a {
+        display: none; /* Ocultar los botones individuales */
+    }
+
+    nav .dropdown {
+        display: block; /* Mostrar el menú desplegable solo en pantallas pequeñas */
+        width: 100%;
+    }
+
+    nav .dropdown-content {
+        position: relative;
+        width: 100%;
+    }
+
+    nav .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+/* MAIN 1 -------------------------------------------------------------------*/
+    .header1 {
+        height: 20vh; 
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        
+    }
+
+    .main1 {
+        height: auto;
+        padding: 2vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .logo {
+        height: 40vh; 
+    }
+
+    h1 {
+        font-size: 6vw; 
+    }
+
+    .main1 h4 {
+        font-size: 4vw; 
+        text-align: center;
+    }
+
+    .main1 p {
+        font-size: 4vw;
+        text-align: center;
+    }
+
+/* MAIN 2 -------------------------------------------------------------------*/
+    .header2 {
+        flex-direction: column; /* Los elementos del header se apilan */
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    .main2 {
+        flex-direction: column; /* Cambia la disposición a columna */
+        height: auto;
+    }
+
+    .aside2 {
+        width: 100%; /* El aside ocupa el 100% de la pantalla */
+        height: auto; /* Ajuste de altura automática */
+        margin-bottom: 1rem; /* Añadir margen inferior */
+    }
+
+    .parte-izquierda2 {
+        width: 100%; /* La parte izquierda ocupa el 100% de la pantalla */
+        height: auto; /* Ajuste automático de la altura */
+    }
+
+    .article-izquierda2 {
+        width: 100%; /* Los artículos ocupan el 100% de la pantalla */
+        padding: 2vh; /* Reducir el padding */
+        font-size: 1rem; /* Ajustar el tamaño del texto */
+    }
+
+/* MAIN 3 -------------------------------------------------------------------*/
+    .header3 {
+        flex-direction: column;
+        height: auto;
+        padding: 1vh;
+        text-align: center;
+    }
+
+    .header3 h1 {
+        font-size: 2rem;
+        margin-bottom: 1vh;
+    }
+
+    .main3 {
+        height: auto;
+    }
+
+    .partearriba3 {
+        height: auto;  /* El tamaño se ajusta automáticamente */
+        padding: 10vh 0;
+        flex-direction: column; /* Asegura que la imagen esté encima del texto */
+    }
+
+    .partearriba3 p {
+        padding: 5vw;  /* Reduce el padding en pantallas pequeñas */
+        font-size: 1rem;  /* Ajusta el tamaño de la fuente */
+    }
+
+    .partemedio3 {
+        height: auto;
+        padding: 1vh 0;
+        flex-direction: column; /* Asegura que la imagen esté encima del texto */
+    }
+
+    .partemedio3 p {
+        padding: 5vw;  /* Reduce el padding en pantallas pequeñas */
+        font-size: 1rem  /* Ajusta el tamaño de la fuente */
+    }
+
+    .parteabajo3 {
+        height: auto;
+        padding: 1vh 0;
+        flex-direction: column; /* Asegura que la imagen esté encima del texto */
+    }
+
+    .parteabajo3 p {
+        padding: 5vw;  /* Reduce el padding en pantallas pequeñas */
+        font-size: 1rem  /* Ajusta el tamaño de la fuente */
+    }
+
+    .contenido-imagen {
+        width: 80%;  /* Aumenta el tamaño de las imágenes en pantallas pequeñas */
+        height: auto;
+    }
+
+    .musica, .cocina, .disenio {
+        max-width: 40%; /* Limita el tamaño de las imágenes en pantallas pequeñas */
+        height: auto;
+    }
+
+/* MAIN 4 -------------------------------------------------------------------*/
+    .header4,
+    .mini-header {
+        width: 100%;
+        height: 6vh;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+        
+    .main4 h2 {
+        font-size: 1.5rem; /* Ajustar tamaño del texto */
+    }
+
+    .main4 {
+        padding: 5vw; /* Espaciado adaptado */
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .partearriba4 {
+        flex-direction: column; /* Asegura que los artículos se apilen */
+        align-items: center;
+        margin: 2vh 0;
+    }
+
+    .articlearribader4,
+    .articlearribaizq4 {
+        width: 90vw; /* Ajustar el tamaño a un 90% del ancho de la pantalla */
+        margin-left: 0;
+        margin-right: 0;
+        padding: 4vw; /* Más espaciado interno */
+    }
+
+    .articlearribader4 {
+        margin-bottom: 4vw; /* Margen inferior para separar de .articlearribaizq6 */
+    }
+
+    .articlearribader4 ul,
+    .articlearribaizq4 ul {
+        padding-left: 2vw; /* Aumentar espaciado interno en listas */
+    }
+
+    .articlearribader4 li,
+    .articlearribaizq4 li {
+        margin-bottom: 2vw; /* Aumentar el margen entre elementos de lista */
+    }
+
+    .carousel-container {
+        width: 100vw;
+        height: auto;
+        margin-top: 5vh;
+        
+    }
+
+    .carousel-track {
+        display: flex;
+        width: 300%; /* Mostrar 3 imágenes a la vez en pantallas pequeñas */
+        gap: 4vw; /* Aumentar espacio entre imágenes */
+        animation: scroll 15s infinite;
+    }
+
+    .carousel-track img {
+        width: auto; /* Ajusta el ancho de las imágenes */
+        height: 40vh;
+        object-fit: cover;
+    }
+
+    .ubicacion {
+        height: 30vh; /* Ajustar el tamaño del iframe */
+        
+    }
+
+    .articlearribader4 .fecha,
+    .articlearribaizq4 .diploma {
+        font-size: 1rem; /* Reducir tamaño de texto para fechas y diplomas */
+    }
+   
+/* MAIN 5 -------------------------------------------------------------------*/
+    .header5 {
+        height: 12vh;
+        padding: 0 5vw;
+    }
+
+    .partearriba5 {
+        padding-top: 4vh;
+    }
+
+    .partemedio5 {
+        gap: 4vw;
+    }
+
+    .articleformmedio5 {
+        width: 100%;
+        padding: 2vh 0;
+    }
+
+    .textareaarriba,
+    .textareaabajo {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .sectionfooter {
+        width: 40vw;
+    }
+
+    .ig, .tiktok, .linktree {
+        height: 4vh;
+        width: auto;
+        max-width: 100%;
+    }
+
+}
+

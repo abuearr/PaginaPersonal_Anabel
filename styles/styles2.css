@@ -1,0 +1,163 @@
+/* PALETA DE COLORES ----------------------------------------------------------*/
+:root {
+    --color-titulo-web: #487aa1;
+    --color-azul-claro: #b2d9f7;
+    --color-letra-titulo-web: #3d3c3b;
+    --color-cuerpo: #dde3ca;
+    --color-marron: #7c8071;
+}
+
+/* GENERAL --------------------------------------------------------*/
+/* Reinicia márgenes, padding y establece box-sizing para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo global para el body */
+body {
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-family: "Roboto Mono", monospace;
+    background-color: black;
+    display: flex;
+    flex-direction: column; /* Flexbox para la estructura */
+    min-height: 100vh; /* Asegura que el contenido ocupe toda la altura */
+}
+
+/* Encabezado (Header) --------------------------------------------------------*/
+.header7 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8vh;
+    background: radial-gradient(var(--color-azul-claro), var(--color-titulo-web));
+    color: var(--color-letra-titulo-web);
+}
+
+/* Título principal en el header */
+h1 {
+    margin: auto;
+    text-align: center;
+}
+
+/* Título de cada sección (h2) */
+h2 {
+    margin: auto;
+    color: var(--color-azul-claro);
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* Contenido principal ------------------------------------------------------*/
+.main7 {
+    width: 100%;
+    margin: 2vw auto;
+    height: auto;
+    background-color: black;
+}
+
+.content {
+    padding: 4vw 5vh;
+    color: white;
+    text-align: justify;
+}
+
+article {
+    margin-bottom: 3vh; /* Espacio entre artículos */
+}
+
+/* Botón de navegación -------------------------------------------------------*/
+button {
+    height: 7vh;
+    display: flex;     
+    justify-content: center; 
+    align-items: center;
+    font-weight: bold;
+    width: 14.2vw;
+    border: solid 0.5vh var(--color-titulo-web);
+    background: linear-gradient(var(--color-titulo-web), var(--color-azul-claro));
+    cursor: pointer;
+    margin: 2vh auto; /* Centra horizontalmente y añade márgenes superior e inferior */
+}
+
+/* Efecto hover sobre el botón */
+button:hover {
+    background: black;
+    border: solid 0.5vh white;
+    color: white;
+}
+
+/* Enlaces (a) sin subrayado y con el color definido */
+a {
+    text-decoration: none;
+    color: var(--color-letra-titulo-web);
+}
+
+/* Pie de página -------------------------------------------------------------*/
+.footer7 {
+    width: 100%;
+    height: 7vh;
+    background-color: var(--color-titulo-web);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer7 p {
+    margin: 0;
+}
+
+/* MEDIOS DE COMUNICACIÓN - RESPONDER A PANTALLAS PEQUEÑAS -------------------*/
+@media screen and (max-width: 768px) {
+    /* Adaptaciones para pantallas pequeñas (menores a 768px) */
+    
+    /* Reducir márgenes y tamaño de los elementos */
+    .main7 {
+        margin: 5vw auto; /* Reduce margen en pantallas pequeñas */
+        padding: 3vw 3vh; /* Ajustar relleno */
+    }
+
+    h2 {
+        font-size: 2rem; /* Hacer sub-títulos más pequeños */
+    }
+
+    /* Ajustes para el header */
+    .header7 {
+        flex-direction: column;
+        height: auto;
+        padding: 1vh;
+        text-align: center;
+    }
+
+    /* Aseguramos que el título se ajuste bien */
+    .header7 h1 {
+        font-size: 2rem;
+        margin-bottom: 1vh;
+    }
+
+    /* Aseguramos que el botón de navegación se adapte */
+    button {
+        width: 70vw; /* Reducir el ancho del botón para pantallas pequeñas */
+        font-size: 1.1rem; /* Reducir el tamaño de la fuente del botón */
+        margin: 1.5vh auto; /* Ajustar los márgenes */
+    }
+
+    /* Ajuste de la fuente de los artículos */
+    .content p {
+        font-size: 0.9rem; /* Ajusta el tamaño de la fuente para mejor lectura en móviles */
+    }
+
+    /* Ajuste de márgenes en los artículos */
+    article {
+        margin-bottom: 2vh; /* Reducir el margen entre los artículos */
+    }
+
+    /* Pie de página con ajustes de tamaño */
+    .footer7 {
+        height: 10vh; /* Mayor espacio para el pie de página */
+    }
+}
